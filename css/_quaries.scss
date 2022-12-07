@@ -1,0 +1,158 @@
+//1396px
+
+@media screen and (max-width: 87.25em) {
+  html {
+    font-size: 56.25%; //9 px default for 1rem;
+  }
+}
+//1235px
+
+@media screen and (max-width: 77.3em) {
+  .head__textbox__info {
+    margin-top: 5rem !important;
+    justify-content: space-between;
+  }
+}
+
+//1095px
+
+@media screen and (max-width: 68.4em) {
+  .section-popular {
+    background-image: none;
+    background-color: #1f2022 !important;
+    .popular {
+      grid-template-columns: 1fr !important;
+    }
+  }
+}
+
+@media screen and (max-width: 53.875em) {
+  .benefits__textbox {
+    padding: 0 !important;
+  }
+}
+
+//800px
+@media screen and (max-width: 50em) {
+  html {
+    font-size: 50%;
+  }
+
+  .mobile-navigation__container {
+    position: fixed;
+    width: 40vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #1f2022;
+    transition: 1s all linear;
+    z-index: 999;
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5rem;
+      margin-top: 2rem;
+      &__item {
+        font-size: 2rem;
+        .link {
+          color: #fff;
+          &:hover {
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+  //mobile navigation
+  .mobile-navigation {
+    display: block !important;
+
+    &__container {
+      transform: translateX(0);
+    }
+
+    .icon {
+      font-size: 3rem;
+      color: $main-color;
+
+      &--open {
+        display: none;
+      }
+    }
+    &--open {
+      .icon--close {
+        display: none;
+      }
+      .icon--open {
+        display: block;
+      }
+
+      .mobile-navigation__container {
+        transform: translateX(-100%);
+      }
+    }
+  }
+
+  //hidinam pc navigationa
+  .mobile-navigation ~ .nav__right-side,
+  .mobile-navigation ~ .nav__left-side {
+    display: none;
+  }
+
+  .faq {
+    padding: 5rem 2.5rem !important;
+    .faq__list {
+      font-size: 1.1rem;
+    }
+  }
+  .section-popular__explore {
+    flex-direction: column;
+    // justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .card-slider {
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 1rem;
+  }
+}
+
+//500px
+
+@media screen and (max-width: 31.25em) {
+  .header {
+    padding: 5rem 0.5rem 2rem 0.5rem;
+
+    .title,
+    .text-paragraph {
+      text-align: center;
+    }
+    .container {
+      max-width: 100%;
+    }
+
+    .head__textbox {
+      grid-row: 1/2;
+    }
+    .item-container {
+      min-width: 90% !important;
+      .slider__item {
+        max-width: 90%;
+      }
+    }
+  }
+
+  section {
+    // padding: 8rem 0 !important;
+  }
+}
+
+@media screen and (max-width: 24.375em) {
+  html {
+    font-size: 43.75%;
+  }
+}
