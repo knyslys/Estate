@@ -217,7 +217,7 @@ body {
 }
 .header .head__imgbox {
   width: 100%;
-  background-image: url("../img/header-house.jpg");
+  background-image: url("../img/header-house.webp");
   background-size: cover;
   background-position: top;
   height: 80vh;
@@ -511,7 +511,7 @@ body {
   gap: 2rem;
 }
 .section-services .services__imgbox {
-  background-image: url("../img/our-services.jpg");
+  background-image: url("../img/our-services.webp");
   background-size: cover;
   background-position: bottom;
   height: 70vh;
@@ -550,7 +550,7 @@ body {
   color: rgb(87, 117, 230);
 }
 .section-benefits .benefits__imgbox {
-  background-image: url("../img/benefits.jpg");
+  background-image: url("../img/benefits.webp");
   background-size: cover;
   background-position: bottom;
   box-shadow: 0 0 0px 2rem rgba(136, 136, 138, 0.2);
@@ -667,15 +667,12 @@ body {
   color: #fff;
 }
 .section-faq .faq__list {
-  display: flex;
-  flex-direction: column;
   border-radius: 10px;
   border: 1px solid #3d7f64;
-  padding: 2rem;
   transition: 0.6s all linear;
   position: relative;
-  gap: 3rem;
-  max-height: 7.5rem;
+  padding: 1rem;
+  max-height: 5.5rem;
   overflow: hidden;
   transition: max-height 1s;
 }
@@ -687,6 +684,8 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  min-height: 100%;
+  margin-bottom: 2rem;
 }
 .section-faq .faq__list .icon--close {
   display: none;
