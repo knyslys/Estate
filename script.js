@@ -142,9 +142,26 @@ hiddenListItem2.forEach((item, index) => {
 const leftArrow = document.querySelector(".left-arrow");
 const rightArrow = document.querySelector(".right-arrow");
 const house = document.querySelectorAll(".homes__slider__box");
+const houseSlider = document.querySelector(".homes__slider");
 let currentSlide = 0;
 
-const setActiveCard = (slide) => {
+houseSlider.addEventListener("scroll", () => {
+  // console.log(
+  //   house[1].getBoundingClientRect().left -
+  //     houseSlider.getBoundingClientRect().left
+  // );
+  house.forEach((h, i) => {
+    if (
+      h.getBoundingClientRect().left -
+        houseSlider.getBoundingClientRect().left ===
+      0
+    ) {
+      setActiveCard(i);
+    }
+  });
+});
+
+const setActiveCard = function (slide) {
   house.forEach((e) => {
     e.classList.remove("homes__slider__box--selected");
   });
@@ -153,10 +170,6 @@ const setActiveCard = (slide) => {
 };
 
 const slideCards = (slide) => {
-  // house.forEach((e) => {
-  //   let howMuchToSlide = 400 * slide;
-  //   // e.style.transform = "translateX(-" + howMuchToSlide + "%)";
-  // });
   let howMuchToSlide = house[0].clientWidth * slide;
   document.querySelector(".homes__slider").scrollLeft = howMuchToSlide;
   setActiveCard(slide);
@@ -168,9 +181,6 @@ rightArrow.addEventListener("click", () => {
   slideCards(currentSlide);
   console.log(currentSlide);
   console.log(document.querySelector(".homes__slider").scrollLeft);
-
-  // alert("ho");
-  // alert(currentSlide);
 });
 
 leftArrow.addEventListener("click", () => {
